@@ -37,6 +37,52 @@ const otherProjects = [
   { img: projectCrystal, title: "CRYSTAL REZİDANS", slug: "crystal-rezidans" },
 ];
 
+const projectTimeline: { year: string; projects: { title: string; desc: string }[] }[] = [
+  { year: "2008", projects: [{ title: "Maltepe Hasan Şadoğlu Mesleki ve Teknik Anadolu Lisesi (İlci Holding) — 17.500 m²", desc: "Eğitim kurumu projesi, okul binası kaba ve ince inşaat uygulaması." }] },
+  { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması." }] },
+  { year: "2011", projects: [{ title: "Silivri Balcı Holding Üniversite — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi." }] },
+  { year: "2012", projects: [
+    { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması." },
+    { title: "Esenler Amiral Vehbi Ziya Dümer Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, donanımlı okul binası inşası." },
+    { title: "Esenler Belediye Binası — 18.000 m²", desc: "Kamu hizmet binası projesi, geniş ölçekli betonarme ve üst yapı uygulaması." },
+    { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri." },
+  ]},
+  { year: "2013", projects: [
+    { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması." },
+    { title: "Esenler Özdilek İmam Hatip Lisesi (Tet Yapı) — 16.800 m²", desc: "Eğitim kurumu inşaat projesi ve temel yapı işleri." },
+    { title: "İBB Avcılar Sosyal Tesis (İnsaart Yapı) — 15.000 m²", desc: "Belediye sosyal tesis binası inşaat ve yapı uygulaması." },
+  ]},
+  { year: "2014", projects: [{ title: "Irak Kerbela Yurt ve Okul Projesi (İnsaart Yapı) — 20.300 m²", desc: "Uluslararası eğitim ve konaklama projesi, yurt ve okul inşası." }] },
+  { year: "2015", projects: [
+    { title: "Bağcılar Balabey-1 İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi temel ve kaba inşaat uygulaması." },
+    { title: "Bağcılar MK Huzur Konut Projesi — 5.300 m²", desc: "Konut projesi, betonarme ve üstyapı uygulaması." },
+  ]},
+  { year: "2016", projects: [
+    { title: "Bakırköy İnto Tekstil — 15.400 m²", desc: "Endüstriyel tesis ve tekstil fabrikası yapı uygulaması." },
+    { title: "Bağcılar Sefa İnşaat 1 Konut Projesi — 12.000 m²", desc: "Çok katlı konut projesi inşaat ve yapı uygulaması." },
+  ]},
+  { year: "2017", projects: [
+    { title: "Bağcılar Naturel İnşaat Konut Projesi — 14.500 m²", desc: "Modern konut projesi genel inşaat uygulaması." },
+    { title: "Bağcılar Koşar İnşaat İş Merkezi — 8.200 m²", desc: "İş merkezi projesi, ticari alanlara yönelik betonarme yapı uygulaması." },
+  ]},
+  { year: "2018", projects: [
+    { title: "Bağcılar Sefa İnşaat 2 — 11.600 m²", desc: "Gelişmiş konut projesi yapı uygulaması." },
+    { title: "Bağcılar Adem Almuş İnşaat Rezidans", desc: "Rezidans projesi, yüksek katlı yapı inşaat uygulaması." },
+  ]},
+  { year: "2019", projects: [
+    { title: "Bağcılar MK İnşaat Konut Projesi (3 Blok) — 45.900 m²", desc: "Geniş çaplı, 3 bloktan oluşan toplu konut projesi inşaat uygulaması." },
+    { title: "Bağcılar Balabey İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi yapı uygulaması." },
+  ]},
+  { year: "2021", projects: [{ title: "Bağcılar CR Huzur Yapı Rezidans — 33.500 m²", desc: "Rezidans projesi, malzemeli demir-beton ve kapsamlı işçilik uygulaması." }] },
+  { year: "2022", projects: [
+    { title: "Bağcılar Özboy İnşaat Konut Projesi — 12.000 m²", desc: "Yeni nesil konut projesi inşaat uygulaması." },
+    { title: "Güneşli Konut Projesi — 16 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi yapım işleri." },
+    { title: "Bağcılar Bilici Tekstil İş Merkezi", desc: "Tekstil odaklı ticari iş merkezi projesi yapı uygulaması." },
+    { title: "Bağcılar Yaygan İş Merkezi", desc: "İş merkezi projesi, ticari yapı inşaat uygulaması." },
+  ]},
+  { year: "2023", projects: [{ title: "Bayrampaşa Okul (Tüyemder) — 4.500 m²", desc: "Eğitim kurumu inşaat projesi ve altyapı işleri." }] },
+];
+
 const TamamlananTaahhutler = () => (
   <div className="min-h-screen overflow-x-hidden" style={{ fontFamily: "'Inter', sans-serif" }}>
     <Header />
