@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Instagram } from "lucide-react";
+import { ChevronLeft, ChevronRight, Instagram, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
