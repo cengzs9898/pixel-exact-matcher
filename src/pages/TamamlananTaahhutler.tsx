@@ -40,7 +40,7 @@ const otherProjects = [
 const projectTimeline: { year: string; projects: { title: string; desc: string; mapUrl?: string }[] }[] = [
   { year: "2008", projects: [{ title: "Maltepe Hasan Şadoğlu Mesleki ve Teknik Anadolu Lisesi (İlci Holding) — 17.500 m²", desc: "Eğitim kurumu projesi, okul binası kaba ve ince inşaat uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cac6902a998539:0xcfcfd8030e403c48?entry=s&sa=X&ved=2ahUKEwiUqZPPle2TAxXs9LsIHUL2CVsQ4kB6BAgNEAA&hl=tr" }] },
   { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması." }] },
-  { year: "2011", projects: [{ title: "Silivri Balcı Holding Üniversite — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi." }] },
+  { year: "2011", projects: [{ title: "İstanbul Rumeli Üniversitesi (Silivri Balcı Holding) — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14b53f226381135b:0x1466fd158a50541f?entry=s&sa=X&ved=2ahUKEwj8ltSglu2TAxV7S_EDHUHyI14Q4kB6BAgZEAA&hl=tr" }] },
   { year: "2012", projects: [
     { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması." },
     { title: "Esenler Amiral Vehbi Ziya Dümer Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, donanımlı okul binası inşası." },
