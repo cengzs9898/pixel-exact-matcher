@@ -107,7 +107,11 @@ const Hakkimizda = () => {
                 <h3 className="text-[20px] md:text-[24px] font-bold text-primary" style={{ fontFamily: "'Montserrat', sans-serif" }}>{member.name}</h3>
                 <p className="text-[14px] md:text-[16px] text-secondary font-medium">{member.title}</p>
               </div>
-              <p className="text-[13px] md:text-[15px] leading-[22px] md:leading-[26px] text-foreground text-center px-4">{member.bio}</p>
+              <div className="text-[13px] md:text-[15px] leading-[22px] md:leading-[26px] text-foreground text-left md:text-justify px-4 space-y-3 md:space-y-4">
+                {member.bio.split("\n\n").map((para, idx) => (
+                  <p key={idx}>{para}</p>
+                ))}
+              </div>
               <p className="text-secondary text-[14px] md:text-[16px] font-medium italic text-center mt-3 md:mt-4 cursor-pointer">devamını oku...</p>
             </div>
           ))}
