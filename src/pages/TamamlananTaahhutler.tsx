@@ -120,6 +120,57 @@ const TamamlananTaahhutler = () => (
       </div>
     </section>
 
+    {/* PROJE TARİHÇESİ - TIMELINE */}
+    <section className="py-12 md:py-20 bg-background">
+      <div className="max-w-[1100px] mx-auto px-4 md:px-12 lg:px-20">
+        <h2 className="text-[28px] md:text-[42px] font-bold text-center text-primary leading-tight mb-3 md:mb-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+          Proje Tarihçesi
+        </h2>
+        <p className="text-[14px] md:text-[16px] text-center text-muted-foreground leading-[22px] md:leading-[26px] max-w-[600px] mx-auto mb-10 md:mb-16">
+          2008'den bugüne hayata geçirdiğimiz projelerin yıl yıl dökümü.
+        </p>
+
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-secondary/40 md:-translate-x-1/2" aria-hidden="true" />
+
+          <div className="space-y-10 md:space-y-16">
+            {projectTimeline.map((entry, idx) => {
+              const isLeft = idx % 2 === 0;
+              return (
+                <div key={entry.year} className="relative">
+                  {/* Dot */}
+                  <div className="absolute left-4 md:left-1/2 w-4 h-4 md:w-5 md:h-5 rounded-full bg-secondary border-4 border-background shadow-md -translate-x-1/2 top-1 md:top-2 z-10" aria-hidden="true" />
+
+                  <div className={`pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-12`}>
+                    {/* Year */}
+                    <div className={`${isLeft ? "md:text-right md:pr-12" : "md:col-start-2 md:text-left md:pl-12"} mb-3 md:mb-0`}>
+                      <span className="inline-block text-[28px] md:text-[40px] font-bold text-primary leading-none" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                        {entry.year}
+                      </span>
+                    </div>
+                    {/* Projects */}
+                    <div className={`${isLeft ? "md:col-start-2 md:pl-12" : "md:col-start-1 md:row-start-1 md:text-right md:pr-12"} space-y-4`}>
+                      {entry.projects.map((p, i) => (
+                        <div key={i} className="bg-background rounded-lg shadow-md border border-border p-4 md:p-5">
+                          <h3 className="text-[14px] md:text-[16px] font-bold text-primary leading-snug mb-1 md:mb-2" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                            {p.title}
+                          </h3>
+                          <p className="text-[12px] md:text-[13px] text-muted-foreground leading-[18px] md:leading-[20px]">
+                            {p.desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+
     {/* DİĞER PROJELER */}
     <section className="py-12 md:py-20" style={{ background: "linear-gradient(180deg, #E6E6E6 0%, #FFFFFF 100%)" }}>
       <div className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20">
