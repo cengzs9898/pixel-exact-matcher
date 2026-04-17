@@ -14,6 +14,8 @@ import projectCrystal from "@/assets/project-crystal.jpg";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 
 const Hakkimizda = () => {
+  const [expandedBios, setExpandedBios] = useState<Record<number, boolean>>({});
+
   const features = [
     { icon: "🏗️", title: "18+ yıllık deneyim", desc: "Sektörde köklü tecrübe" },
     { icon: "🏢", title: "50+ tamamlanan proje", desc: "Başarıyla teslim edilen projeler" },
