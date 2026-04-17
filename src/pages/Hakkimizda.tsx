@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -13,6 +14,8 @@ import projectCrystal from "@/assets/project-crystal.jpg";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 
 const Hakkimizda = () => {
+  const [expandedBios, setExpandedBios] = useState<Record<number, boolean>>({});
+
   const features = [
     { icon: "🏗️", title: "18+ yıllık deneyim", desc: "Sektörde köklü tecrübe" },
     { icon: "🏢", title: "50+ tamamlanan proje", desc: "Başarıyla teslim edilen projeler" },
@@ -107,12 +110,29 @@ const Hakkimizda = () => {
                 <h3 className="text-[20px] md:text-[24px] font-bold text-primary" style={{ fontFamily: "'Montserrat', sans-serif" }}>{member.name}</h3>
                 <p className="text-[14px] md:text-[16px] text-secondary font-medium">{member.title}</p>
               </div>
-              <div className="text-[13px] md:text-[15px] leading-[22px] md:leading-[26px] text-foreground text-left md:text-justify px-4 space-y-3 md:space-y-4">
-                {member.bio.split("\n\n").map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
-              </div>
-              <p className="text-secondary text-[14px] md:text-[16px] font-medium italic text-center mt-3 md:mt-4 cursor-pointer">devamını oku...</p>
+              {(() => {
+                const paragraphs = member.bio.split("\n\n");
+                const isExpanded = expandedBios[i];
+                const visible = isExpanded ? paragraphs : paragraphs.slice(0, 1);
+                const hasMore = paragraphs.length > 1;
+                return (
+                  <>
+                    <div className="text-[13px] md:text-[15px] leading-[22px] md:leading-[26px] text-foreground text-left md:text-justify px-4 space-y-3 md:space-y-4">
+                      {visible.map((para, idx) => (
+                        <p key={idx}>{para}</p>
+                      ))}
+                    </div>
+                    {hasMore && (
+                      <button
+                        onClick={() => setExpandedBios((prev) => ({ ...prev, [i]: !prev[i] }))}
+                        className="text-secondary text-[14px] md:text-[16px] font-medium italic text-center mt-3 md:mt-4 cursor-pointer block mx-auto hover:underline"
+                      >
+                        {isExpanded ? "daha az göster" : "devamını oku..."}
+                      </button>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           ))}
         </div>
