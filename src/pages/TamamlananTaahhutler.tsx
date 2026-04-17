@@ -159,6 +159,17 @@ const TamamlananTaahhutler = () => (
                           <p className="text-[12px] md:text-[13px] text-muted-foreground leading-[18px] md:leading-[20px]">
                             {p.desc}
                           </p>
+                          {p.mapUrl && (
+                            <a
+                              href={p.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 mt-2 md:mt-3 text-[12px] md:text-[13px] font-medium text-secondary hover:underline"
+                            >
+                              <MapPin size={14} />
+                              <span>Haritada gör</span>
+                            </a>
+                          )}
                         </div>
                       ))}
                     </div>
