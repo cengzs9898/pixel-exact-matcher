@@ -37,8 +37,8 @@ const otherProjects = [
   { img: projectCrystal, title: "CRYSTAL REZİDANS", slug: "crystal-rezidans" },
 ];
 
-const projectTimeline: { year: string; projects: { title: string; desc: string }[] }[] = [
-  { year: "2008", projects: [{ title: "Maltepe Hasan Şadoğlu Mesleki ve Teknik Anadolu Lisesi (İlci Holding) — 17.500 m²", desc: "Eğitim kurumu projesi, okul binası kaba ve ince inşaat uygulaması." }] },
+const projectTimeline: { year: string; projects: { title: string; desc: string; mapUrl?: string }[] }[] = [
+  { year: "2008", projects: [{ title: "Maltepe Hasan Şadoğlu Mesleki ve Teknik Anadolu Lisesi (İlci Holding) — 17.500 m²", desc: "Eğitim kurumu projesi, okul binası kaba ve ince inşaat uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cac6902a998539:0xcfcfd8030e403c48?entry=s&sa=X&ved=2ahUKEwiUqZPPle2TAxXs9LsIHUL2CVsQ4kB6BAgNEAA&hl=tr" }] },
   { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması." }] },
   { year: "2011", projects: [{ title: "Silivri Balcı Holding Üniversite — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi." }] },
   { year: "2012", projects: [
