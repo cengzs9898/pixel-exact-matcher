@@ -39,12 +39,11 @@ const Index = () => {
       {/* HERO */}
       <section
         ref={heroRef as React.RefObject<HTMLElement>}
-        className="relative h-[70vh] md:h-screen overflow-hidden"
-        style={{ marginTop: "60px" }}
+        className="relative h-[70vh] md:h-screen overflow-hidden mt-[60px] md:mt-[146px]"
       >
         <video
           autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover md:mt-[16px]"
+          className="absolute inset-0 w-full h-full object-cover"
           style={{
             transform: `scale(${1 + scrollProgress * 0.15})`,
             transition: "transform 0.1s linear",
@@ -67,9 +66,12 @@ const Index = () => {
           <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             <strong>Yaşanılası Mekanlar</strong>
           </p>
-          <button className="mt-4 md:mt-6 flex items-center gap-2 md:gap-3 px-5 md:px-8 py-3 md:py-4 rounded-full" style={{ background: "rgba(0,0,0,0.2)" }}>
+          <button
+            className="mt-4 md:mt-6 flex items-center justify-center gap-2 md:gap-3 md:w-[339px] md:h-[70px] px-5 py-3"
+            style={{ background: "rgba(0,0,0,0.2)", borderRadius: "58px" }}
+          >
             <Play size={20} className="text-primary-foreground md:w-6 md:h-6" />
-            <span className="text-[18px] md:text-[33px] font-extrabold text-primary-foreground">Videoyu Oynat</span>
+            <span className="text-[18px] md:text-[33px] font-extrabold leading-[40px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>Videoyu Oynat</span>
           </button>
           <p className="mt-6 md:mt-12 text-[18px] md:text-[30px] font-light italic text-primary-foreground">
             Sadece şehirleri değil...<br />Geleceği dönüştürüyoruz.
