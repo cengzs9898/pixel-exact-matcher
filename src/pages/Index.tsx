@@ -15,6 +15,7 @@ import featuredMarmaray from "@/assets/featured-marmaray.png";
 import featuredCrystal from "@/assets/featured-crystal.png";
 import featuredBg from "@/assets/featured-bg.png";
 import aboutFamily from "@/assets/about-family.jpg";
+import nedenServetBanner from "@/assets/neden-servet-banner.png";
 import projectsCarousel from "@/assets/projects-carousel.jpg";
 import taahhutBg from "@/assets/taahhut-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -27,6 +28,7 @@ import logoGoldGreen from "@/assets/logo-gold-green.png";
 
 const Index = () => {
   const [activeTimeline, setActiveTimeline] = useState(3);
+  const [nedenServetExpanded, setNedenServetExpanded] = useState(false);
   const { ref: heroRef, scrollProgress } = useScrollParallax();
 
   const timelinePeriods = [
@@ -91,29 +93,36 @@ const Index = () => {
       ]} />
 
       {/* NEDEN SERVET */}
-      <section className="py-10 md:py-16">
+      <section className="pt-10 md:pt-16 pb-6 md:pb-10">
         <h2 className="text-[36px] md:text-[80px] font-bold text-center text-primary leading-tight md:leading-[98px] tracking-[0.04em] px-4" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           Neden Servet Kentsel<br />Dönüşüm İnşaat?
         </h2>
       </section>
 
       {/* About Banner */}
-      <section className="relative min-h-[500px] md:h-[838px]">
-        <img src={aboutFamily} alt="Aile" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={800} height={600} />
-        <div className="absolute inset-0 bg-primary/60" />
-        <div className="relative z-10 max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 flex flex-col md:flex-row h-full py-12 md:py-0">
+      <section className="relative min-h-[500px] md:min-h-[838px]">
+        <img src={nedenServetBanner} alt="Yaşanılası mekanlar" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={838} />
+        <div className="relative z-10 max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 flex flex-col md:flex-row min-h-[500px] md:min-h-[838px] py-12 md:py-24">
           <div className="flex items-center md:w-1/2">
-            <div>
-              <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground mb-6 md:mb-8" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
+            <div className="max-w-[796px]">
+              <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
                 Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.
+                {nedenServetExpanded && (
+                  <>
+                    {" "}Her projemiz, prestij ve kaliteyi bir araya getiren, bölgeye değer katan bir yaşam alanı olarak tasarlanır. 18 yılı aşkın sektör tecrübemiz ve kentsel dönüşüm alanındaki uzmanlığımız ile sadece yapılar değil, yaşam alanları inşa ediyoruz.
+                  </>
+                )}
               </p>
-              <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground mb-6 md:mb-8" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
-                18 yılı aşkın sektör tecrübemiz ve kentsel dönüşüm alanındaki uzmanlığımız ile
-              </p>
-              <button className="text-[20px] md:text-[31px] font-extrabold text-secondary">devamını oku</button>
+              <button
+                onClick={() => setNedenServetExpanded((v) => !v)}
+                className="mt-6 md:mt-8 text-[20px] md:text-[31px] font-extrabold leading-[38px] text-secondary hover:underline transition-all"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {nedenServetExpanded ? "daha az göster" : "devamını oku"}
+              </button>
             </div>
           </div>
-          <div className="hidden md:flex items-end w-1/2 justify-start pb-16">
+          <div className="hidden md:flex items-center w-1/2 justify-center">
             <img src={logoGold} alt="Servet İnşaat" className="w-[300px] lg:w-[415px] h-auto" style={{ filter: "drop-shadow(0px 4px 20px #0D4746)" }} />
           </div>
         </div>
