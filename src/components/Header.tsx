@@ -62,7 +62,7 @@ const Header = ({ activePage }: HeaderProps) => {
   }, [menuVisible]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[76px]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px]">
       <div className="max-w-[1920px] mx-auto flex items-center justify-between h-full px-4 md:px-12 lg:px-20">
         <button onClick={openMenu} className="flex items-center gap-2 md:gap-3 text-primary-foreground group">
           <div className="flex flex-col gap-[3px] md:gap-[4px] transition-transform duration-300 group-hover:scale-110">
@@ -73,7 +73,7 @@ const Header = ({ activePage }: HeaderProps) => {
           <span className="text-sm md:text-lg font-medium transition-opacity duration-300 group-hover:opacity-80" style={{ color: "#F0F0F0" }}>Menü</span>
         </button>
         <Link to="/" className="flex items-center justify-center">
-          <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[60px] w-auto" />
+          <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
         </Link>
         <div className="flex items-center gap-3 md:gap-8">
           <button className="flex items-center gap-1 md:gap-2 text-primary-foreground">
