@@ -42,7 +42,7 @@ const projectTimeline: { year: string; projects: { title: string; desc: string; 
   { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması." }] },
   { year: "2011", projects: [{ title: "İstanbul Rumeli Üniversitesi (Silivri Balcı Holding) — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14b53f226381135b:0x1466fd158a50541f?entry=s&sa=X&ved=2ahUKEwj8ltSglu2TAxV7S_EDHUHyI14Q4kB6BAgZEAA&hl=tr" }] },
   { year: "2012", projects: [
-    { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması." },
+    { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabaa43e06081f:0x8f5f2bc0d366aee3?entry=s&sa=X&ved=2ahUKEwjO3bi3lu2TAxUVSvEDHd64LDoQ4kB6BAgYEAA&hl=tr" },
     { title: "Esenler Amiral Vehbi Ziya Dümer Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, donanımlı okul binası inşası." },
     { title: "Esenler Belediye Binası — 18.000 m²", desc: "Kamu hizmet binası projesi, geniş ölçekli betonarme ve üst yapı uygulaması." },
     { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri." },
