@@ -45,7 +45,7 @@ const projectTimeline: { year: string; projects: { title: string; desc: string; 
     { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabaa43e06081f:0x8f5f2bc0d366aee3?entry=s&sa=X&ved=2ahUKEwjO3bi3lu2TAxUVSvEDHd64LDoQ4kB6BAgYEAA&hl=tr" },
     { title: "Esenler Amiral Vehbi Ziya Dümer Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, donanımlı okul binası inşası.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabab67fb6bfa3:0xf1a7aec7d507e644?entry=s&sa=X&ved=2ahUKEwiR3KLMlu2TAxWRQ_EDHd-kHqQQ4kB6BAgYEAA&hl=tr" },
     { title: "Esenler Belediye Binası — 18.000 m²", desc: "Kamu hizmet binası projesi, geniş ölçekli betonarme ve üst yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14caba9560a078af:0x24e067190492aa2e?entry=s&sa=X&ved=2ahUKEwjv8OLdlu2TAxXLR_EDHTviOlEQ4kB6BAgWEAA&hl=tr" },
-    { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri." },
+    { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14caba2af87889fb:0x61bf92acc4c3074e?entry=s&sa=X&ved=2ahUKEwj0tYmLl-2TAxVsRPEDHfPeNsgQ4kB6BAgDEAA&hl=tr" },
   ]},
   { year: "2013", projects: [
     { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması." },
