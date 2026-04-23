@@ -37,9 +37,11 @@ const otherProjects = [
   { img: projectCrystal, title: "CRYSTAL REZİDANS", slug: "crystal-rezidans" },
 ];
 
+const FIRM_MAP_URL = "https://maps.app.goo.gl/ZeuUHzgw6sHxQe8M8?g_st=iw";
+
 const projectTimeline: { year: string; projects: { title: string; desc: string; mapUrl?: string }[] }[] = [
   { year: "2008", projects: [{ title: "Maltepe Hasan Şadoğlu Mesleki ve Teknik Anadolu Lisesi (İlci Holding) — 17.500 m²", desc: "Eğitim kurumu projesi, okul binası kaba ve ince inşaat uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cac6902a998539:0xcfcfd8030e403c48?entry=s&sa=X&ved=2ahUKEwiUqZPPle2TAxXs9LsIHUL2CVsQ4kB6BAgNEAA&hl=tr" }] },
-  { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması." }] },
+  { year: "2009", projects: [{ title: "Güneşli Konut Projesi — 20 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi inşaat uygulaması.", mapUrl: FIRM_MAP_URL }] },
   { year: "2011", projects: [{ title: "İstanbul Rumeli Üniversitesi (Silivri Balcı Holding) — 65.000 m²", desc: "Kapsamlı üniversite kampüsü ve eğitim binaları anahtar teslim/betonarme inşaat projesi.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14b53f226381135b:0x1466fd158a50541f?entry=s&sa=X&ved=2ahUKEwj8ltSglu2TAxV7S_EDHUHyI14Q4kB6BAgZEAA&hl=tr" }] },
   { year: "2012", projects: [
     { title: "Esenler Atışalanı Anadolu Lisesi (Kahraman İnşaat) — 17.300 m²", desc: "Eğitim kurumu projesi, okul binası yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabaa43e06081f:0x8f5f2bc0d366aee3?entry=s&sa=X&ved=2ahUKEwjO3bi3lu2TAxUVSvEDHd64LDoQ4kB6BAgYEAA&hl=tr" },
@@ -48,39 +50,39 @@ const projectTimeline: { year: string; projects: { title: string; desc: string; 
     { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14caba2af87889fb:0x61bf92acc4c3074e?entry=s&sa=X&ved=2ahUKEwj0tYmLl-2TAxVsRPEDHfPeNsgQ4kB6BAgDEAA&hl=tr" },
   ]},
   { year: "2013", projects: [
-    { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması." },
+    { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması.", mapUrl: FIRM_MAP_URL },
     { title: "Esenler Özdilek İmam Hatip Lisesi (Tet Yapı) — 16.800 m²", desc: "Eğitim kurumu inşaat projesi ve temel yapı işleri.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabac18d497f53:0x6ec373f5a1d4612e?entry=s&sa=X&ved=2ahUKEwj9zsC3l-2TAxXeQ_EDHbueMJAQ4kB6BAgZEAA&hl=tr" },
     { title: "İBB Avcılar Spor Kompleksi (İnsaart Yapı) — 15.000 m²", desc: "Belediye spor kompleksi binası inşaat ve yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14caa1025a304787:0x4219597e561c6a2c?entry=s&sa=X&ved=2ahUKEwjOqoPAmO2TAxVoBdsEHYmgMckQ4kB6BAgDEAA&hl=tr" },
   ]},
-  { year: "2014", projects: [{ title: "Irak Kerbela Yurt ve Okul Projesi (İnsaart Yapı) — 20.300 m²", desc: "Uluslararası eğitim ve konaklama projesi, yurt ve okul inşası." }] },
+  { year: "2014", projects: [{ title: "Irak Kerbela Yurt ve Okul Projesi (İnsaart Yapı) — 20.300 m²", desc: "Uluslararası eğitim ve konaklama projesi, yurt ve okul inşası.", mapUrl: FIRM_MAP_URL }] },
   { year: "2015", projects: [
-    { title: "Bağcılar Balabey-1 İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi temel ve kaba inşaat uygulaması." },
-    { title: "Bağcılar MK Huzur Konut Projesi — 5.300 m²", desc: "Konut projesi, betonarme ve üstyapı uygulaması." },
+    { title: "Bağcılar Balabey-1 İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi temel ve kaba inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar MK Huzur Konut Projesi — 5.300 m²", desc: "Konut projesi, betonarme ve üstyapı uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
   { year: "2016", projects: [
-    { title: "Bakırköy İnto Tekstil — 15.400 m²", desc: "Endüstriyel tesis ve tekstil fabrikası yapı uygulaması." },
-    { title: "Bağcılar Sefa İnşaat 1 Konut Projesi — 12.000 m²", desc: "Çok katlı konut projesi inşaat ve yapı uygulaması." },
+    { title: "Bakırköy İnto Tekstil — 15.400 m²", desc: "Endüstriyel tesis ve tekstil fabrikası yapı uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Sefa İnşaat 1 Konut Projesi — 12.000 m²", desc: "Çok katlı konut projesi inşaat ve yapı uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
   { year: "2017", projects: [
-    { title: "Bağcılar Naturel İnşaat Konut Projesi — 14.500 m²", desc: "Modern konut projesi genel inşaat uygulaması." },
-    { title: "Bağcılar Koşar İnşaat İş Merkezi — 8.200 m²", desc: "İş merkezi projesi, ticari alanlara yönelik betonarme yapı uygulaması." },
+    { title: "Bağcılar Naturel İnşaat Konut Projesi — 14.500 m²", desc: "Modern konut projesi genel inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Koşar İnşaat İş Merkezi — 8.200 m²", desc: "İş merkezi projesi, ticari alanlara yönelik betonarme yapı uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
   { year: "2018", projects: [
-    { title: "Bağcılar Sefa İnşaat 2 — 11.600 m²", desc: "Gelişmiş konut projesi yapı uygulaması." },
-    { title: "Bağcılar Adem Almuş İnşaat Rezidans", desc: "Rezidans projesi, yüksek katlı yapı inşaat uygulaması." },
+    { title: "Bağcılar Sefa İnşaat 2 — 11.600 m²", desc: "Gelişmiş konut projesi yapı uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Adem Almuş İnşaat Rezidans", desc: "Rezidans projesi, yüksek katlı yapı inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
   { year: "2019", projects: [
-    { title: "Bağcılar MK İnşaat Konut Projesi (3 Blok) — 45.900 m²", desc: "Geniş çaplı, 3 bloktan oluşan toplu konut projesi inşaat uygulaması." },
-    { title: "Bağcılar Balabey İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi yapı uygulaması." },
+    { title: "Bağcılar MK İnşaat Konut Projesi (3 Blok) — 45.900 m²", desc: "Geniş çaplı, 3 bloktan oluşan toplu konut projesi inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Balabey İnşaat Konut Projesi — 6.000 m²", desc: "Konut projesi yapı uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
-  { year: "2021", projects: [{ title: "Bağcılar CR Huzur Yapı Rezidans — 33.500 m²", desc: "Rezidans projesi, malzemeli demir-beton ve kapsamlı işçilik uygulaması." }] },
+  { year: "2021", projects: [{ title: "Bağcılar CR Huzur Yapı Rezidans — 33.500 m²", desc: "Rezidans projesi, malzemeli demir-beton ve kapsamlı işçilik uygulaması.", mapUrl: FIRM_MAP_URL }] },
   { year: "2022", projects: [
-    { title: "Bağcılar Özboy İnşaat Konut Projesi — 12.000 m²", desc: "Yeni nesil konut projesi inşaat uygulaması." },
-    { title: "Güneşli Konut Projesi — 16 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi yapım işleri." },
-    { title: "Bağcılar Bilici Tekstil İş Merkezi", desc: "Tekstil odaklı ticari iş merkezi projesi yapı uygulaması." },
-    { title: "Bağcılar Yaygan İş Merkezi", desc: "İş merkezi projesi, ticari yapı inşaat uygulaması." },
+    { title: "Bağcılar Özboy İnşaat Konut Projesi — 12.000 m²", desc: "Yeni nesil konut projesi inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Güneşli Konut Projesi — 16 Daire & 2 Dükkan", desc: "Karma kullanımlı konut ve ticari alan projesi yapım işleri.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Bilici Tekstil İş Merkezi", desc: "Tekstil odaklı ticari iş merkezi projesi yapı uygulaması.", mapUrl: FIRM_MAP_URL },
+    { title: "Bağcılar Yaygan İş Merkezi", desc: "İş merkezi projesi, ticari yapı inşaat uygulaması.", mapUrl: FIRM_MAP_URL },
   ]},
-  { year: "2023", projects: [{ title: "Bayrampaşa Okul (Tüyemder) — 4.500 m²", desc: "Eğitim kurumu inşaat projesi ve altyapı işleri." }] },
+  { year: "2023", projects: [{ title: "Bayrampaşa Okul (Tüyemder) — 4.500 m²", desc: "Eğitim kurumu inşaat projesi ve altyapı işleri.", mapUrl: FIRM_MAP_URL }] },
 ];
 
 const TamamlananTaahhutler = () => (
