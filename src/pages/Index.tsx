@@ -193,7 +193,7 @@ const Index = () => {
 
       {/* İLETİŞİM FORMU */}
       <section className="relative min-h-[600px] md:min-h-[1259px]">
-        <img src={contactBg} alt="İletişim" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={800} style={{ filter: "blur(2.5px)" }} />
+        <img src={iletisimBg} alt="İletişim" className="absolute inset-0 w-full h-full object-cover" loading="lazy" width={1920} height={800} style={{ filter: "blur(2.5px)" }} />
         <div className="absolute inset-0 bg-primary/30" />
         <div className="relative z-10 max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 flex items-center py-12 md:py-0 min-h-[600px] md:min-h-[1259px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center w-full">
