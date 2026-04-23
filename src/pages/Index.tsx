@@ -16,6 +16,8 @@ import featuredCrystal from "@/assets/featured-crystal.png";
 import featuredBg from "@/assets/featured-bg.png";
 import aboutFamily from "@/assets/about-family.jpg";
 import nedenServetBanner from "@/assets/neden-servet-banner.png";
+import projelerTamamlanan from "@/assets/projeler-tamamlanan.png";
+import projelerBegonya from "@/assets/projeler-begonya.png";
 import projectsCarousel from "@/assets/projects-carousel.jpg";
 import taahhutBg from "@/assets/taahhut-bg.jpg";
 import contactBg from "@/assets/contact-bg.jpg";
@@ -131,7 +133,7 @@ const Index = () => {
       {/* PROJELER */}
       <ProjectsCarousel
         images={[
-          { img1: projectsCarousel, img2: taahhutBg },
+          { img1: projelerTamamlanan, img2: projelerBegonya },
           { img1: projectUniversity, img2: projectMarmaray },
           { img1: projectCrystal, img2: heroBg },
         ]}
