@@ -84,10 +84,10 @@ const Index = () => {
       </section>
 
       {/* 3 FEATURED PROJECTS - Rolex-style scroll into hero */}
-      <FeaturedCards scrollProgress={scrollProgress} projects={[
-        { img: projectUniversity, title: "RUMELİ\nÜNİVERSİTESİ" },
-        { img: projectMarmaray, title: "MARMARAY\nPROJESİ" },
-        { img: projectCrystal, title: "CRYSTAL\nREZİDANS" },
+      <FeaturedCards scrollProgress={scrollProgress} backgroundImg={featuredBg} projects={[
+        { img: featuredRumeli, title: "RUMELİ\nÜNİVERSİTESİ" },
+        { img: featuredMarmaray, title: "MARMARAY\nPROJESİ" },
+        { img: featuredCrystal, title: "CRYSTAL\nREZİDANS" },
       ]} />
 
       {/* NEDEN SERVET */}
