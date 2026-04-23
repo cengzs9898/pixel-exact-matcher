@@ -3,9 +3,10 @@ import { useEffect, useRef, useState } from "react";
 interface FeaturedCardsProps {
   scrollProgress: number;
   projects: { img: string; title: string }[];
+  backgroundImg?: string;
 }
 
-const FeaturedCards = ({ scrollProgress, projects }: FeaturedCardsProps) => {
+const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCardsProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [cardProgress, setCardProgress] = useState(0);
 
