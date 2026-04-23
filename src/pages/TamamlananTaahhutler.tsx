@@ -48,7 +48,7 @@ const projectTimeline: { year: string; projects: { title: string; desc: string; 
     { title: "Marmaray Yenikapı – Yedikule – Kazlıçeşme", desc: "Büyük ölçekli ulaşım ve altyapı projesi kapsamında gerçekleştirilen yapı işleri.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14caba2af87889fb:0x61bf92acc4c3074e?entry=s&sa=X&ved=2ahUKEwj0tYmLl-2TAxVsRPEDHfPeNsgQ4kB6BAgDEAA&hl=tr" },
   ]},
   { year: "2013", projects: [
-    { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması." },
+    { title: "Haznedar Katlı Otopark — 30.000 m²", desc: "Çok katlı otopark projesi, yüksek tonajlı betonarme yapı uygulaması.", mapUrl: "https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14cabb3994fcb171:0xbdbd6b1520c3f4b7?entry=s&sa=X&ved=2ahUKEwj4tYecl-2TAxVcX_EDHekHMMgQ4kB6BAgXEAA&hl=tr" },
     { title: "Esenler Özdilek İmam Hatip Lisesi (Tet Yapı) — 16.800 m²", desc: "Eğitim kurumu inşaat projesi ve temel yapı işleri." },
     { title: "İBB Avcılar Sosyal Tesis (İnsaart Yapı) — 15.000 m²", desc: "Belediye sosyal tesis binası inşaat ve yapı uygulaması." },
   ]},
