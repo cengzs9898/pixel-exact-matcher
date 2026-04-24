@@ -1,6 +1,5 @@
 import { Instagram } from "lucide-react";
 import logoGold from "@/assets/logo-gold.png";
-import logoGoldGreen from "@/assets/logo-gold-green.png";
 import footerBg from "@/assets/footer-bg.png";
 
 const Footer = () => (
