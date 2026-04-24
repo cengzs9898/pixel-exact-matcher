@@ -48,9 +48,9 @@ const Index = () => {
       {/* HERO */}
       <section
         ref={heroRef as React.RefObject<HTMLElement>}
-        className="relative h-[200vh] md:h-[260vh] mt-[60px] md:mt-[146px]"
+        className="relative h-[160vh] md:h-[180vh] mt-[60px] md:mt-[146px]"
       >
-        <div className="sticky top-[60px] md:top-[146px] h-[calc(100vh-60px)] md:h-[calc(100vh-146px)] overflow-hidden">
+        <div className="sticky top-0 h-screen overflow-hidden">
           <video
             autoPlay muted loop playsInline
             className="absolute inset-0 w-full h-full object-cover"
