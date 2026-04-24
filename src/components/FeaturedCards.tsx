@@ -31,7 +31,7 @@ const FeaturedCards = ({ projects }: FeaturedCardsProps) => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-20 -mt-[100vh] md:-mt-[140vh] pb-12 md:pb-24 pointer-events-none"
+      className="relative z-20 -mt-[60vh] md:-mt-[80vh] pb-12 md:pb-24 pointer-events-none"
     >
       <div
         className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 pointer-events-auto"

@@ -177,7 +177,7 @@ const Header = ({ activePage }: HeaderProps) => {
 
           {/* Middle Panel - Projects 2x2 (631x1223 on desktop) */}
           <div
-            className="hidden md:flex w-[631px] h-[1223px] max-h-screen bg-background relative items-center justify-center flex-shrink-0"
+            className="hidden md:flex w-[631px] h-[1223px] max-h-screen bg-white relative items-center justify-center flex-shrink-0"
             style={{
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -189,11 +189,14 @@ const Header = ({ activePage }: HeaderProps) => {
             >
               X
             </button>
-            <div className="grid grid-cols-2 gap-5">
+            <div
+              className="grid grid-cols-2"
+              style={{ columnGap: "20px", rowGap: "20px" }}
+            >
               {menuProjects.map((project, i) => (
                 <div
                   key={i}
-                  className="relative group overflow-hidden cursor-pointer flex-shrink-0"
+                  className="relative group overflow-hidden cursor-pointer"
                   style={{
                     width: "286px",
                     height: "227px",
