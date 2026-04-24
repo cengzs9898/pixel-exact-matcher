@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Play, ChevronLeft, ChevronRight, Instagram } from "lucide-react";
+import { Play, Instagram } from "lucide-react";
+import ArrowButton from "@/components/ArrowButton";
 import { useScrollParallax } from "@/hooks/useScrollParallax";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import FeaturedCards from "@/components/FeaturedCards";
@@ -143,9 +144,7 @@ const Index = () => {
                 Servet İnşaat kalitesiyle tamamlanan, yükselmeye devam eden ve yakında hayata geçecek projelerimizde, siz de Servet güvencesinin ayrıcalığını keşfedin.
               </p>
               <div className="flex justify-center md:justify-end mt-6 md:mt-8">
-                <button className="w-[60px] h-[60px] md:w-[105px] md:h-[105px] bg-primary flex items-center justify-center">
-                  <ChevronRight size={28} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-                </button>
+                <ArrowButton direction="right" sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
               </div>
             </div>
           </div>
