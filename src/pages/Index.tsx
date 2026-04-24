@@ -266,7 +266,6 @@ const Index = () => {
       {/* FOOTER */}
       <Footer />
     </div>
-    </div>
   );
 };
 
