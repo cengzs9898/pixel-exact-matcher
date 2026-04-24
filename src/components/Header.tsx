@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { Search, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoGold from "@/assets/logo-gold.png";
+import iconMenu from "@/assets/icon-menu.png";
+import iconSearch from "@/assets/icon-search.png";
+import iconInstagram from "@/assets/icon-instagram.png";
 import projectUniversity from "@/assets/project-university.jpg";
 import projectMarmaray from "@/assets/project-marmaray.jpg";
 import projectCrystal from "@/assets/project-crystal.jpg";
