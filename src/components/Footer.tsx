@@ -20,7 +20,7 @@ const Footer = () => (
         {/* LEFT — logo aligned with İLETİŞİM İÇİN heading */}
         <div className="flex justify-center md:justify-start">
           <img
-            src={logoGoldGreen}
+            src={logoGold}
             alt="Servet İnşaat"
             className="w-[200px] md:w-[289px] h-auto"
             style={{ maxHeight: "139px", objectFit: "contain" }}
