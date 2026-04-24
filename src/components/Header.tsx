@@ -35,6 +35,24 @@ const Header = ({ activePage }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [menuAnimating, setMenuAnimating] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY < 10) {
+        setHeaderVisible(true);
+      } else if (currentY > lastScrollY.current) {
+        setHeaderVisible(false);
+      } else if (currentY < lastScrollY.current) {
+        setHeaderVisible(true);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Handle menu open/close with Rolex-style animation
   const openMenu = () => {
@@ -64,7 +82,10 @@ const Header = ({ activePage }: HeaderProps) => {
   }, [menuVisible]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px]">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px] transition-transform duration-300 ease-out"
+      style={{ transform: headerVisible || menuOpen ? "translateY(0)" : "translateY(-100%)" }}
+    >
       <Link to="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
         <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
       </Link>
