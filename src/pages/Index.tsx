@@ -31,7 +31,6 @@ import videoyuOynatBtn from "@/assets/videoyu-oynat-btn.png";
 
 const Index = () => {
   const [activeTimeline, setActiveTimeline] = useState(3);
-  const [nedenServetExpanded, setNedenServetExpanded] = useState(false);
   const { ref: heroRef, scrollProgress } = useScrollParallax();
 
   const timelinePeriods = [
@@ -103,20 +102,15 @@ const Index = () => {
           <div className="flex items-center md:w-1/2">
             <div className="max-w-[796px]">
               <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
-                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.
-                {nedenServetExpanded && (
-                  <>
-                    {" "}Her projemiz, prestij ve kaliteyi bir araya getiren, bölgeye değer katan bir yaşam alanı olarak tasarlanır. 18 yılı aşkın sektör tecrübemiz ve kentsel dönüşüm alanındaki uzmanlığımız ile sadece yapılar değil, yaşam alanları inşa ediyoruz.
-                  </>
-                )}
+                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.{" "}
+                <Link
+                  to="/hakkimizda"
+                  className="font-extrabold text-secondary hover:underline"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  devamını oku
+                </Link>
               </p>
-              <button
-                onClick={() => setNedenServetExpanded((v) => !v)}
-                className="mt-6 md:mt-8 text-[20px] md:text-[31px] font-extrabold leading-[38px] text-secondary hover:underline transition-all"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {nedenServetExpanded ? "daha az göster" : "devamını oku"}
-              </button>
             </div>
           </div>
           <div className="hidden md:flex items-center w-1/2 justify-center">
