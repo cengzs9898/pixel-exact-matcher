@@ -12,11 +12,11 @@ const FeaturedCards = ({ projects }: FeaturedCardsProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
+      // progress based on overall page scroll within first viewport
+      const scrollY = window.scrollY;
       const windowH = window.innerHeight;
-      // progress = how far the section's top has moved up into the viewport
-      const progress = Math.max(0, Math.min(1, 1 - rect.top / windowH));
+      // start rising as soon as the user scrolls; fully in place after ~1 viewport
+      const progress = Math.max(0, Math.min(1, scrollY / (windowH * 0.8)));
       setCardProgress(progress);
     };
 
@@ -25,19 +25,18 @@ const FeaturedCards = ({ projects }: FeaturedCardsProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const translateY = (1 - cardProgress) * 200;
-  const scale = 0.9 + cardProgress * 0.1;
-  const opacity = Math.min(1, cardProgress * 1.5);
+  const translateY = (1 - cardProgress) * 100;
+  const opacity = cardProgress;
 
   return (
     <section
       ref={sectionRef}
-      className="relative z-20 -mt-[70vh] md:-mt-[100vh] pb-12 md:pb-24 pointer-events-none"
+      className="relative z-20 -mt-[100vh] md:-mt-[140vh] pb-12 md:pb-24 pointer-events-none"
     >
       <div
         className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 pointer-events-auto"
         style={{
-          transform: `translateY(${translateY}px) scale(${scale})`,
+          transform: `translateY(${translateY}px)`,
           opacity,
           willChange: "transform, opacity",
         }}
