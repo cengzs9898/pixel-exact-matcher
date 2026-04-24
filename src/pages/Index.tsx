@@ -284,6 +284,41 @@ const Index = () => {
 
       {/* FOOTER */}
       <Footer />
+
+      {/* INSTAGRAM LIGHTBOX */}
+      {lightboxImg && (
+        <div
+          className="fixed inset-0 z-[200] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 animate-in fade-in duration-200"
+          onClick={() => setLightboxImg(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxImg(null)}
+            aria-label="Kapat"
+            className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-secondary text-secondary flex items-center justify-center text-xl font-bold hover:bg-secondary hover:text-primary transition-all duration-300 hover:rotate-90"
+          >
+            ×
+          </button>
+          <img
+            src={lightboxImg}
+            alt="Instagram görsel önizleme"
+            className="max-w-[92vw] max-h-[88vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <a
+            href="https://instagram.com/servetkentseldonusum"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-primary text-sm md:text-base font-semibold hover:scale-105 transition-transform"
+          >
+            <Instagram size={18} />
+            Instagram'da Aç
+          </a>
+        </div>
+      )}
     </div>
   );
 };
