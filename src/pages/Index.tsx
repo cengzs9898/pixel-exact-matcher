@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Play, ChevronLeft, ChevronRight, Instagram } from "lucide-react";
+import { Play, Instagram } from "lucide-react";
+import ArrowButton from "@/components/ArrowButton";
 import { useScrollParallax } from "@/hooks/useScrollParallax";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import FeaturedCards from "@/components/FeaturedCards";
@@ -143,9 +144,7 @@ const Index = () => {
                 Servet İnşaat kalitesiyle tamamlanan, yükselmeye devam eden ve yakında hayata geçecek projelerimizde, siz de Servet güvencesinin ayrıcalığını keşfedin.
               </p>
               <div className="flex justify-center md:justify-end mt-6 md:mt-8">
-                <button className="w-[60px] h-[60px] md:w-[105px] md:h-[105px] bg-primary flex items-center justify-center">
-                  <ChevronRight size={28} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-                </button>
+                <ArrowButton direction="right" sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
               </div>
             </div>
           </div>
@@ -159,9 +158,11 @@ const Index = () => {
             TARİHÇE
           </h2>
           <div className="flex items-center justify-center gap-0 mb-0 max-w-[1575px] mx-auto overflow-x-auto">
-            <button onClick={() => setActiveTimeline(Math.max(0, activeTimeline - 1))} className="w-[50px] h-[50px] md:w-[75px] md:h-[75px] bg-primary flex items-center justify-center flex-shrink-0">
-              <ChevronLeft size={22} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-            </button>
+            <ArrowButton
+              direction="left"
+              onClick={() => setActiveTimeline(Math.max(0, activeTimeline - 1))}
+              sizeClassName="w-[50px] h-[50px] md:w-[75px] md:h-[75px] flex-shrink-0"
+            />
             <div className="flex-1 border border-black/20 flex items-end min-w-0">
               {timelinePeriods.map((period, i) => (
                 <button key={i} onClick={() => setActiveTimeline(i)} className="flex-1 relative min-w-0">
@@ -174,9 +175,11 @@ const Index = () => {
                 </button>
               ))}
             </div>
-            <button onClick={() => setActiveTimeline(Math.min(timelinePeriods.length - 1, activeTimeline + 1))} className="w-[50px] h-[50px] md:w-[75px] md:h-[75px] bg-primary flex items-center justify-center flex-shrink-0">
-              <ChevronRight size={22} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-            </button>
+            <ArrowButton
+              direction="right"
+              onClick={() => setActiveTimeline(Math.min(timelinePeriods.length - 1, activeTimeline + 1))}
+              sizeClassName="w-[50px] h-[50px] md:w-[75px] md:h-[75px] flex-shrink-0"
+            />
           </div>
           <div className="max-w-[1149px] mx-auto mt-8 md:mt-16 text-center px-4">
             {timelinePeriods[activeTimeline].items.map((item, i) => (

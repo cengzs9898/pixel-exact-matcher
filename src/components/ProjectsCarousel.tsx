@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import ArrowButton from "./ArrowButton";
 
 interface ProjectsCarouselProps {
   images: { img1: string; img2: string }[];
@@ -69,18 +69,8 @@ const ProjectsCarousel = ({
         </div>
 
         <div className="flex items-center gap-3 mb-6 md:mb-8">
-          <button
-            onClick={prev}
-            className="w-[60px] h-[60px] md:w-[105px] md:h-[105px] bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors active:scale-95"
-          >
-            <ChevronLeft size={24} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-          </button>
-          <button
-            onClick={next}
-            className="w-[60px] h-[60px] md:w-[105px] md:h-[105px] bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors active:scale-95"
-          >
-            <ChevronRight size={24} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-          </button>
+          <ArrowButton direction="left" onClick={prev} sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
+          <ArrowButton direction="right" onClick={next} sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
           <div className="flex gap-2 ml-4">
             {images.map((_, i) => (
               <button

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import ArrowButton from "@/components/ArrowButton";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import logoGold from "@/assets/logo-gold.png";
@@ -99,12 +100,16 @@ const ProjeDetay = () => {
       <section className="py-8 md:py-10 bg-background">
         <div className="max-w-[1000px] mx-auto px-4 md:px-12 lg:px-20">
           <div className="flex justify-center gap-3 mb-6 md:mb-8">
-            <button onClick={() => setGalleryIndex((prev) => (prev - 1 + project.gallery.length) % project.gallery.length)} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-primary flex items-center justify-center">
-              <ChevronLeft size={20} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-            </button>
-            <button onClick={() => setGalleryIndex((prev) => (prev + 1) % project.gallery.length)} className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] bg-primary flex items-center justify-center">
-              <ChevronRight size={20} style={{ color: "#F7DF6B" }} strokeWidth={3} />
-            </button>
+            <ArrowButton
+              direction="left"
+              onClick={() => setGalleryIndex((prev) => (prev - 1 + project.gallery.length) % project.gallery.length)}
+              sizeClassName="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
+            />
+            <ArrowButton
+              direction="right"
+              onClick={() => setGalleryIndex((prev) => (prev + 1) % project.gallery.length)}
+              sizeClassName="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
+            />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
             {project.gallery.map((img, i) => (
