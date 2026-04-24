@@ -263,32 +263,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FOOTER LOGO */}
-      <section className="py-8 md:py-16 flex justify-center px-4">
-        <img src={logoGoldGreen} alt="Servet İnşaat" className="w-[250px] md:w-[644px] h-auto" loading="lazy" />
-      </section>
-
-      {/* OLD FOOTER - replaced with shared */}
-      <footer className="bg-primary py-12 md:py-0" style={{ minHeight: "300px" }}>
-        <div className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 py-8 md:pt-20 text-center">
-          <h4 className="text-[32px] md:text-[65px] font-extrabold leading-tight md:leading-[79px] text-secondary mb-6 md:mb-10">İLETİŞİM İÇİN</h4>
-          <div className="space-y-2 md:space-y-3 text-primary-foreground">
-            <a href="https://maps.google.com/?q=Bağdat+Caddesi+Arı+Apartmanı+No:171+Göztepe+Kadıköy+İstanbul" target="_blank" rel="noopener noreferrer" className="text-[14px] md:text-[23px] font-medium leading-[22px] md:leading-[28px] hover:text-secondary transition-colors block">Bağdat Caddesi Arı Apartmanı No: 171<br />Daire: 3 Göztepe Mahallesi, Kadıköy / İstanbul</a>
-            <a href="tel:+905427313428" className="text-[14px] md:text-[23px] font-medium hover:text-secondary transition-colors block">0 (542) 731 34 28</a>
-            <a href="mailto:info@servetkentsel.com" className="text-[14px] md:text-[23px] font-medium hover:text-secondary transition-colors block">info@servetkentsel.com</a>
-          </div>
-          <div className="mt-8 md:mt-16 pt-4 md:pt-6 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
-            <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <Instagram size={20} style={{ color: "#F7DF6B" }} />
-              <span className="text-[14px] md:text-[18px] font-medium text-primary-foreground">servetkentseldonusum</span>
-            </a>
-            <div className="flex gap-4 md:gap-8">
-              <a href="#" className="text-[12px] md:text-[17px] font-medium text-primary-foreground">KVKK Aydılatması</a>
-              <a href="#" className="text-[12px] md:text-[17px] font-medium text-primary-foreground">Çerez Politikaları</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* FOOTER */}
+      <Footer />
+    </div>
     </div>
   );
 };
