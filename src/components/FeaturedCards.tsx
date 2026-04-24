@@ -53,11 +53,11 @@ const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCard
           willChange: "transform, opacity",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-5 justify-center items-center">
           {projects.map((project, i) => (
             <div
               key={i}
-              className="relative group overflow-hidden rounded-[20px] h-[400px] md:h-[750px] lg:h-[951px]"
+              className="relative group overflow-hidden rounded-[20px] w-full md:w-[511px] h-[400px] md:h-[952px] flex-shrink-0"
               style={{
                 transitionDelay: `${i * 0.05}s`,
               }}
