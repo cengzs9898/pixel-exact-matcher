@@ -109,8 +109,8 @@ const Index = () => {
               </p>
               <Link
                 to="/hakkimizda"
-                className="inline-block mt-6 md:mt-8 text-[20px] md:text-[31px] font-extrabold leading-[38px] hover:underline"
-                style={{ fontFamily: "'Inter', sans-serif", color: "#F7DF6B", textShadow: "0px 4px 12px rgba(0,0,0,0.5)" }}
+                className="block text-right mt-4 md:mt-6 text-[20px] md:text-[31px] font-extrabold leading-[38px] underline underline-offset-4 decoration-2 hover:text-secondary transition-colors"
+                style={{ fontFamily: "'Inter', sans-serif", color: "#FFFFFF", textShadow: "0px 2px 10px rgba(0,0,0,0.9), 0px 0px 2px rgba(0,0,0,0.8)" }}
               >
                 devamını oku →
               </Link>
