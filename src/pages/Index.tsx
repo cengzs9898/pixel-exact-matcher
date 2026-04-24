@@ -54,7 +54,8 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             transform: `scale(${1 + scrollProgress * 0.15})`,
-            transition: "transform 0.1s linear",
+            filter: `blur(${scrollProgress * 12}px)`,
+            transition: "transform 0.1s linear, filter 0.1s linear",
           }}
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
@@ -81,9 +82,6 @@ const Index = () => {
             <Play size={20} className="text-primary-foreground md:w-6 md:h-6" />
             <span className="text-[18px] md:text-[33px] font-extrabold leading-[40px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>Videoyu Oynat</span>
           </button>
-          <p className="mt-6 md:mt-12 text-[18px] md:text-[30px] font-light italic text-primary-foreground">
-            Sadece şehirleri değil...<br />Geleceği dönüştürüyoruz.
-          </p>
         </div>
       </section>
 
