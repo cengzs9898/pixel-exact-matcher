@@ -264,9 +264,15 @@ const Index = () => {
           </p>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-5 max-w-[1584px] mx-auto mb-6 md:mb-10">
             {[insta1, insta2, insta3, insta4, insta1].map((img, i) => (
-              <a key={i} href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="block overflow-hidden aspect-square">
+              <button
+                key={i}
+                type="button"
+                onClick={() => setLightboxImg(img)}
+                className="block overflow-hidden aspect-square cursor-zoom-in"
+                aria-label={`Instagram görseli ${i + 1} büyüt`}
+              >
                 <img src={img} alt={`Instagram ${i + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" width={512} height={512} />
-              </a>
+              </button>
             ))}
           </div>
           <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 md:gap-3">
