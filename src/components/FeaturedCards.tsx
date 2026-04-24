@@ -33,17 +33,6 @@ const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCard
       ref={sectionRef}
       className="relative z-20 -mt-16 md:-mt-40 py-12 md:py-24 overflow-hidden"
     >
-      {/* Blurred background */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImg ?? projects[0]?.img ?? ""})`,
-          filter: "blur(4.2px)",
-          transform: "scale(1.05)",
-        }}
-      />
-      <div className="absolute inset-0 bg-primary/20" aria-hidden="true" />
 
       <div
         className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 relative"
