@@ -27,6 +27,7 @@ import insta3 from "@/assets/insta3.jpg";
 import insta4 from "@/assets/insta4.jpg";
 import logoGold from "@/assets/logo-gold.png";
 import logoGoldGreen from "@/assets/logo-gold-green.png";
+import videoyuOynatBtn from "@/assets/videoyu-oynat-btn.png";
 
 const Index = () => {
   const [activeTimeline, setActiveTimeline] = useState(3);
