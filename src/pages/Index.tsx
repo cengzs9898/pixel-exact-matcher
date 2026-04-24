@@ -105,15 +105,14 @@ const Index = () => {
           <div className="flex items-center md:w-1/2">
             <div className="max-w-[796px]">
               <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground text-left" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
-                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.
+                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.{" "}
+                <Link
+                  to="/hakkimizda"
+                  className="font-extrabold text-secondary hover:underline cursor-pointer"
+                >
+                  devamını oku →
+                </Link>
               </p>
-              <Link
-                to="/hakkimizda"
-                className="block text-right mt-4 md:mt-6 text-[20px] md:text-[31px] font-extrabold leading-[38px] underline underline-offset-4 decoration-2 hover:text-secondary transition-colors"
-                style={{ fontFamily: "'Inter', sans-serif", color: "#FFFFFF", textShadow: "0px 2px 10px rgba(0,0,0,0.9), 0px 0px 2px rgba(0,0,0,0.8)" }}
-              >
-                devamını oku →
-              </Link>
             </div>
           </div>
           <div className="hidden md:block md:w-1/2" aria-hidden="true" />
