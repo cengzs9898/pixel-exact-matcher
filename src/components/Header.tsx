@@ -91,15 +91,15 @@ const Header = ({ activePage }: HeaderProps) => {
       {/* Fullscreen Menu Overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-[100] flex flex-col md:flex-row"
+          className="fixed inset-0 z-[100] flex flex-col md:flex-row overflow-hidden"
           style={{
             transition: "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
             opacity: menuVisible ? 1 : 0,
           }}
         >
-          {/* Left Panel - Menu */}
+          {/* Left Panel - Menu (641x1223 on desktop) */}
           <div
-            className="w-full md:w-1/2 bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 min-h-screen md:min-h-0"
+            className="w-full md:w-[641px] md:h-[1223px] md:max-h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 min-h-screen md:min-h-0 flex-shrink-0"
             style={{
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -112,18 +112,21 @@ const Header = ({ activePage }: HeaderProps) => {
               >
                 X
               </button>
-              <nav className="mt-4 md:mt-16 space-y-1 md:space-y-2">
+              <nav className="mt-4 md:mt-16 space-y-1 md:space-y-3">
                 {menuItems.map((item, index) => (
                   <Link
                     key={item.label}
                     to={item.href}
-                    className={`block text-[20px] md:text-[28px] font-medium py-1.5 md:py-2 transition-all duration-500 ${
+                    className={`block py-1.5 md:py-1.5 transition-all duration-500 ${
                       item.label === activePage
                         ? "text-secondary"
                         : "text-primary-foreground hover:text-secondary hover:translate-x-3"
                     }`}
                     style={{
-                      fontFamily: "'Montserrat', sans-serif",
+                      fontFamily: "'Inter', sans-serif",
+                      fontWeight: 500,
+                      fontSize: "24px",
+                      lineHeight: 1.4,
                       opacity: menuVisible ? 1 : 0,
                       transform: menuVisible ? "translateY(0)" : "translateY(20px)",
                       transition: `opacity 0.4s ease ${0.15 + index * 0.05}s, transform 0.4s ease ${0.15 + index * 0.05}s, color 0.3s ease`,
@@ -151,27 +154,29 @@ const Header = ({ activePage }: HeaderProps) => {
             </div>
           </div>
 
-          {/* Right Panel - Projects */}
+          {/* Middle Panel - Projects 2x2 (631x1223 on desktop) */}
           <div
-            className="hidden md:flex w-1/2 bg-background relative items-start justify-center pt-20"
+            className="hidden md:flex w-[631px] h-[1223px] max-h-screen bg-background relative items-center justify-center flex-shrink-0"
             style={{
-              transform: menuVisible ? "translateX(0)" : "translateX(100%)",
+              transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
             <button
               onClick={closeMenu}
-              className="absolute top-6 left-6 w-[50px] h-[50px] rounded-full border-2 border-primary text-primary flex items-center justify-center text-xl font-bold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:rotate-90 hover:scale-110"
+              className="absolute top-6 left-6 w-[50px] h-[50px] rounded-full border-2 border-primary text-primary flex items-center justify-center text-xl font-bold hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:rotate-90 hover:scale-110 z-10"
             >
               X
             </button>
-            <div className="grid grid-cols-2 gap-4 p-12 pt-16 max-w-[700px]">
+            <div className="grid grid-cols-2 gap-5">
               {menuProjects.map((project, i) => (
                 <div
                   key={i}
-                  className="relative group overflow-hidden rounded-xl cursor-pointer"
+                  className="relative group overflow-hidden cursor-pointer flex-shrink-0"
                   style={{
-                    height: "220px",
+                    width: "286px",
+                    height: "227px",
+                    borderRadius: "15px",
                     opacity: menuVisible ? 1 : 0,
                     transform: menuVisible ? "scale(1)" : "scale(0.9)",
                     transition: `opacity 0.4s ease ${0.2 + i * 0.08}s, transform 0.4s ease ${0.2 + i * 0.08}s`,
@@ -179,14 +184,35 @@ const Header = ({ activePage }: HeaderProps) => {
                 >
                   <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-4">
-                    <span className="px-5 py-2 rounded-full text-[16px] font-bold text-primary transition-all duration-300 group-hover:bg-secondary group-hover:text-primary" style={{ fontFamily: "'Montserrat', sans-serif", background: "rgba(255,255,255,0.85)" }}>
+                  <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-3">
+                    <span className="px-4 py-1.5 rounded-full text-[14px] font-bold text-primary transition-all duration-300 group-hover:bg-secondary group-hover:text-primary" style={{ fontFamily: "'Montserrat', sans-serif", background: "rgba(255,255,255,0.85)" }}>
                       {project.title}
                     </span>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Right Panel - Blurred hero video (fills remaining space) */}
+          <div
+            className="hidden md:block flex-1 relative overflow-hidden bg-primary"
+            style={{
+              opacity: menuVisible ? 1 : 0,
+              transition: "opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s",
+            }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ filter: "blur(10px)", transform: "scale(1.1)" }}
+            >
+              <source src="/videos/hero-video.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-primary/20" />
           </div>
         </div>
       )}
