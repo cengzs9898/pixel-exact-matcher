@@ -143,7 +143,7 @@ const Index = () => {
               <p className="text-[16px] md:text-[30px] font-medium leading-[24px] md:leading-[36px] tracking-[0.04em] text-center" style={{ fontFamily: "'Inter', sans-serif", color: "#000", maxWidth: "643px", margin: "0 auto" }}>
                 Servet İnşaat kalitesiyle tamamlanan, yükselmeye devam eden ve yakında hayata geçecek projelerimizde, siz de Servet güvencesinin ayrıcalığını keşfedin.
               </p>
-              <div className="flex justify-center md:justify-end mt-6 md:mt-8">
+              <div className="flex justify-center mt-6 md:mt-8">
                 <ArrowButton direction="right" sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
               </div>
             </div>
