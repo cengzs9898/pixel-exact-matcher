@@ -63,18 +63,18 @@ const Header = ({ activePage }: HeaderProps) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px]">
-      <div className="max-w-[1920px] mx-auto flex items-center justify-between h-full px-4 md:px-12 lg:px-20">
+      <Link to="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
+        <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
+      </Link>
+      <div className="relative max-w-[1920px] mx-auto flex items-center justify-between h-full px-4 md:px-12 lg:px-20">
         <button onClick={openMenu} className="flex items-center gap-2 md:gap-3 text-primary-foreground group">
           <div className="flex flex-col gap-[3px] md:gap-[4px] transition-transform duration-300 group-hover:scale-110">
             <span className="block w-7 md:w-9 h-[3px] md:h-1 bg-secondary rounded-sm transition-all duration-300 group-hover:w-8 md:group-hover:w-10" />
             <span className="block w-7 md:w-9 h-[3px] md:h-1 bg-secondary rounded-sm transition-all duration-300 delay-75 group-hover:w-6 md:group-hover:w-7" />
-            <span className="block w-7 md:w-9 h-[3px] md:h-1 rounded-sm transition-all duration-300 delay-150 group-hover:w-8 md:group-hover:w-10" style={{ backgroundColor: "#D9D9D9" }} />
+            <span className="block w-7 md:w-9 h-[3px] md:h-1 rounded-sm transition-all duration-300 delay-150 group-hover:w-8 md:group-hover:w-10" style={{ backgroundColor: "#FFFFFF" }} />
           </div>
           <span className="text-sm md:text-lg font-medium transition-opacity duration-300 group-hover:opacity-80" style={{ color: "#F0F0F0" }}>Menü</span>
         </button>
-        <Link to="/" className="flex items-center justify-center">
-          <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
-        </Link>
         <div className="flex items-center gap-3 md:gap-8">
           <button className="flex items-center gap-1 md:gap-2 text-primary-foreground">
             <Search size={18} className="md:w-5 md:h-5" style={{ color: "#F7DF6B" }} />
