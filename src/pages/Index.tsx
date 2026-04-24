@@ -109,16 +109,14 @@ const Index = () => {
               </p>
               <Link
                 to="/hakkimizda"
-                className="block text-left mt-4 md:mt-6 text-[20px] md:text-[31px] font-extrabold leading-[38px] text-secondary hover:underline"
-                style={{ fontFamily: "'Inter', sans-serif" }}
+                className="inline-block mt-6 md:mt-8 text-[20px] md:text-[31px] font-extrabold leading-[38px] hover:underline"
+                style={{ fontFamily: "'Inter', sans-serif", color: "#F7DF6B", textShadow: "0px 4px 12px rgba(0,0,0,0.5)" }}
               >
-                devamını oku
+                devamını oku →
               </Link>
             </div>
           </div>
-          <div className="hidden md:flex items-center w-1/2 justify-center">
-            <img src={logoGold} alt="Servet İnşaat" className="w-[300px] lg:w-[415px] h-auto" style={{ filter: "drop-shadow(0px 4px 20px #0D4746)" }} />
-          </div>
+          <div className="hidden md:block md:w-1/2" aria-hidden="true" />
         </div>
       </section>
 
