@@ -30,7 +30,6 @@ import logoGoldGreen from "@/assets/logo-gold-green.png";
 
 const Index = () => {
   const [activeTimeline, setActiveTimeline] = useState(3);
-  const [nedenServetExpanded, setNedenServetExpanded] = useState(false);
   const { ref: heroRef, scrollProgress } = useScrollParallax();
 
   const timelinePeriods = [
