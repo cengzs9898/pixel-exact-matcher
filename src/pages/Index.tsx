@@ -76,12 +76,8 @@ const Index = () => {
           <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
             <strong>Yaşanılası Mekanlar</strong>
           </p>
-          <button
-            className="mt-4 md:mt-6 flex items-center justify-center gap-2 md:gap-3 md:w-[339px] md:h-[70px] px-5 py-3"
-            style={{ background: "rgba(0,0,0,0.2)", borderRadius: "58px" }}
-          >
-            <Play size={20} className="text-primary-foreground md:w-6 md:h-6" />
-            <span className="text-[18px] md:text-[33px] font-extrabold leading-[40px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>Videoyu Oynat</span>
+          <button className="mt-4 md:mt-6 hover:opacity-90 transition-opacity" aria-label="Videoyu Oynat">
+            <img src={videoyuOynatBtn} alt="Videoyu Oynat" className="h-[50px] md:h-[70px] w-auto" />
           </button>
         </div>
       </section>
