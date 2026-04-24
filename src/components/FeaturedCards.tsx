@@ -6,7 +6,7 @@ interface FeaturedCardsProps {
   backgroundImg?: string;
 }
 
-const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCardsProps) => {
+const FeaturedCards = ({ projects }: FeaturedCardsProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [cardProgress, setCardProgress] = useState(0);
 
@@ -15,6 +15,7 @@ const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCard
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const windowH = window.innerHeight;
+      // progress = how far the section's top has moved up into the viewport
       const progress = Math.max(0, Math.min(1, 1 - rect.top / windowH));
       setCardProgress(progress);
     };
@@ -24,18 +25,17 @@ const FeaturedCards = ({ scrollProgress, projects, backgroundImg }: FeaturedCard
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const translateY = Math.max(0, (1 - cardProgress) * 120);
-  const scale = 0.85 + cardProgress * 0.15;
-  const opacity = 0.3 + cardProgress * 0.7;
+  const translateY = (1 - cardProgress) * 200;
+  const scale = 0.9 + cardProgress * 0.1;
+  const opacity = Math.min(1, cardProgress * 1.5);
 
   return (
     <section
       ref={sectionRef}
-      className="relative z-20 -mt-16 md:-mt-40 py-12 md:py-24 overflow-hidden"
+      className="relative z-20 -mt-[60vh] md:-mt-[85vh] pb-12 md:pb-24 pointer-events-none"
     >
-
       <div
-        className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 relative"
+        className="max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 pointer-events-auto"
         style={{
           transform: `translateY(${translateY}px) scale(${scale})`,
           opacity,
