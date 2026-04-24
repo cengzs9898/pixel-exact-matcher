@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { Search, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoGold from "@/assets/logo-gold.png";
+import iconMenu from "@/assets/icon-menu.png";
+import iconSearch from "@/assets/icon-search.png";
+import iconInstagram from "@/assets/icon-instagram.png";
 import projectUniversity from "@/assets/project-university.jpg";
 import projectMarmaray from "@/assets/project-marmaray.jpg";
 import projectCrystal from "@/assets/project-crystal.jpg";
@@ -68,24 +70,20 @@ const Header = ({ activePage }: HeaderProps) => {
       </Link>
       <div className="relative max-w-[1920px] mx-auto flex items-center justify-between h-full px-4 md:px-12 lg:px-20">
         <button onClick={openMenu} className="flex items-center gap-2 md:gap-3 text-primary-foreground group">
-          <div className="flex flex-col gap-[3px] md:gap-[4px] transition-transform duration-300 group-hover:scale-110">
-            <span className="block w-7 md:w-9 h-[3px] md:h-1 bg-secondary rounded-sm transition-all duration-300 group-hover:w-8 md:group-hover:w-10" />
-            <span className="block w-7 md:w-9 h-[3px] md:h-1 bg-secondary rounded-sm transition-all duration-300 delay-75 group-hover:w-6 md:group-hover:w-7" />
-            <span className="block w-7 md:w-9 h-[3px] md:h-1 rounded-sm transition-all duration-300 delay-150 group-hover:w-8 md:group-hover:w-10" style={{ backgroundColor: "#FFFFFF" }} />
-          </div>
+          <img src={iconMenu} alt="" aria-hidden="true" className="h-[18px] md:h-[26px] w-auto transition-transform duration-300 group-hover:scale-110" />
           <span className="text-sm md:text-lg font-medium transition-opacity duration-300 group-hover:opacity-80" style={{ color: "#F0F0F0" }}>Menü</span>
         </button>
         <div className="flex items-center gap-3 md:gap-8">
           <button className="flex items-center gap-1 md:gap-2 text-primary-foreground">
-            <Search size={18} className="md:w-5 md:h-5" style={{ color: "#F7DF6B" }} />
+            <img src={iconSearch} alt="" aria-hidden="true" className="h-[18px] md:h-[22px] w-auto" />
             <span className="text-sm md:text-lg font-medium hidden sm:inline" style={{ color: "#F0F0F0" }}>Ara</span>
           </button>
           <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2">
-            <Instagram size={20} style={{ color: "#F7DF6B" }} />
+            <img src={iconInstagram} alt="" aria-hidden="true" className="h-[24px] w-auto" />
             <span className="text-lg font-medium" style={{ color: "#F0F0F0" }}>servetkentseldonusum</span>
           </a>
           <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="md:hidden">
-            <Instagram size={18} style={{ color: "#F7DF6B" }} />
+            <img src={iconInstagram} alt="Instagram" className="h-[20px] w-auto" />
           </a>
         </div>
       </div>
@@ -146,7 +144,7 @@ const Header = ({ activePage }: HeaderProps) => {
               }}
             >
               <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <Instagram size={20} style={{ color: "#F7DF6B" }} />
+                <img src={iconInstagram} alt="" aria-hidden="true" className="h-[24px] w-auto" />
                 <span className="text-primary-foreground text-[16px] md:text-[20px] font-medium">servetkentseldonusum</span>
               </a>
               <img src={logoGold} alt="Servet İnşaat" className="w-[180px] md:w-[280px] h-auto" />
