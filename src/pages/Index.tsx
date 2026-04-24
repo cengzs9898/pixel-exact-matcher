@@ -48,37 +48,39 @@ const Index = () => {
       {/* HERO */}
       <section
         ref={heroRef as React.RefObject<HTMLElement>}
-        className="relative h-[70vh] md:h-screen overflow-hidden mt-[60px] md:mt-[146px]"
+        className="relative h-[70vh] md:h-screen mt-[60px] md:mt-[146px]"
       >
-        <video
-          autoPlay muted loop playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{
-            transform: `scale(${1 + scrollProgress * 0.15})`,
-            filter: `blur(${scrollProgress * 12}px)`,
-            transition: "transform 0.1s linear, filter 0.1s linear",
-          }}
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-        
-        <div
-          className="relative z-10 flex flex-col items-center justify-center h-full text-primary-foreground text-center px-4"
-          style={{
-            opacity: 1 - scrollProgress * 2.5,
-            transform: `translateY(${scrollProgress * -80}px) scale(${1 - scrollProgress * 0.1})`,
-            transition: "opacity 0.05s linear, transform 0.05s linear",
-          }}
-        >
-          <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-            Servet İnşaat
-          </p>
-          <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-            <strong>Yaşanılası Mekanlar</strong>
-          </p>
-          <button className="mt-4 md:mt-6 hover:opacity-90 transition-opacity" aria-label="Videoyu Oynat">
-            <img src={videoyuOynatBtn} alt="Videoyu Oynat" className="h-[50px] md:h-[70px] w-auto" />
-          </button>
+        <div className="sticky top-[60px] md:top-[146px] h-[70vh] md:h-[calc(100vh-146px)] overflow-hidden">
+          <video
+            autoPlay muted loop playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              transform: `scale(${1 + scrollProgress * 0.15})`,
+              filter: `blur(${scrollProgress * 12}px)`,
+              transition: "transform 0.1s linear, filter 0.1s linear",
+            }}
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
+
+          <div
+            className="relative z-10 flex flex-col items-center justify-center h-full text-primary-foreground text-center px-4"
+            style={{
+              opacity: 1 - scrollProgress * 2.5,
+              transform: `translateY(${scrollProgress * -80}px) scale(${1 - scrollProgress * 0.1})`,
+              transition: "opacity 0.05s linear, transform 0.05s linear",
+            }}
+          >
+            <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              Servet İnşaat
+            </p>
+            <p className="text-[32px] md:text-[70px] font-normal leading-[118%]" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <strong>Yaşanılası Mekanlar</strong>
+            </p>
+            <button className="mt-4 md:mt-6 hover:opacity-90 transition-opacity" aria-label="Videoyu Oynat">
+              <img src={videoyuOynatBtn} alt="Videoyu Oynat" className="h-[50px] md:h-[70px] w-auto" />
+            </button>
+          </div>
         </div>
       </section>
 
