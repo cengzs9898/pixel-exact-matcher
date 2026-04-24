@@ -32,7 +32,20 @@ import videoyuOynatBtn from "@/assets/videoyu-oynat-btn.svg";
 
 const Index = () => {
   const [activeTimeline, setActiveTimeline] = useState(3);
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
   const { ref: heroRef, scrollProgress } = useScrollParallax();
+
+  useEffect(() => {
+    if (lightboxImg) {
+      const onKey = (e: KeyboardEvent) => e.key === "Escape" && setLightboxImg(null);
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", onKey);
+      return () => {
+        document.body.style.overflow = "";
+        window.removeEventListener("keydown", onKey);
+      };
+    }
+  }, [lightboxImg]);
 
   const timelinePeriods = [
     { label: "2013-2014", items: ["Şirket kuruluşu ve ilk projeler", "İstanbul'da kentsel dönüşüm çalışmalarına başlangıç"] },
