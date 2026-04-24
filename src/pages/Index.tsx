@@ -101,16 +101,16 @@ const Index = () => {
         <div className="relative z-10 max-w-[1920px] mx-auto px-4 md:px-12 lg:px-20 flex flex-col md:flex-row min-h-[500px] md:min-h-[838px] py-12 md:py-24">
           <div className="flex items-center md:w-1/2">
             <div className="max-w-[796px]">
-              <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
-                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.{" "}
-                <Link
-                  to="/hakkimizda"
-                  className="font-extrabold text-secondary hover:underline"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  devamını oku
-                </Link>
+              <p className="text-[18px] md:text-[31px] font-semibold leading-[28px] md:leading-[38px] text-primary-foreground text-left" style={{ fontFamily: "'Inter', sans-serif", textShadow: "0px 4px 20px #0D4746" }}>
+                Servet Kentsel Dönüşüm İnşaat, yalnızca yapı üretmekle kalmaz; şehirleri dönüştüren, yaşam kalitesini yükselten ve gelecek nesillere güvenli, estetik ve sürdürülebilir alanlar bırakan bir vizyonla hareket eder.
               </p>
+              <Link
+                to="/hakkimizda"
+                className="block text-left mt-4 md:mt-6 text-[20px] md:text-[31px] font-extrabold leading-[38px] text-secondary hover:underline"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                devamını oku
+              </Link>
             </div>
           </div>
           <div className="hidden md:flex items-center w-1/2 justify-center">
