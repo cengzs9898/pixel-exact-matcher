@@ -61,7 +61,7 @@ const Index = () => {
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-primary/40" />
+        
         <div
           className="relative z-10 flex flex-col items-center justify-center h-full text-primary-foreground text-center px-4"
           style={{
