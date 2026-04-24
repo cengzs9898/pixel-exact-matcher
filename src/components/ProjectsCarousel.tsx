@@ -69,8 +69,8 @@ const ProjectsCarousel = ({
         </div>
 
         <div className="flex items-center gap-3 mb-6 md:mb-8">
-          <ArrowButton direction="left" size={60} onClick={prev} className="md:!w-[105px] md:!h-[105px]" />
-          <ArrowButton direction="right" size={60} onClick={next} className="md:!w-[105px] md:!h-[105px]" />
+          <ArrowButton direction="left" onClick={prev} sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
+          <ArrowButton direction="right" onClick={next} sizeClassName="w-[60px] h-[60px] md:w-[105px] md:h-[105px]" />
           <div className="flex gap-2 ml-4">
             {images.map((_, i) => (
               <button
