@@ -144,7 +144,7 @@ const Header = ({ activePage }: HeaderProps) => {
               }}
             >
               <a href="https://instagram.com/servetkentseldonusum" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                <Instagram size={20} style={{ color: "#F7DF6B" }} />
+                <img src={iconInstagram} alt="" aria-hidden="true" className="h-[24px] w-auto" />
                 <span className="text-primary-foreground text-[16px] md:text-[20px] font-medium">servetkentseldonusum</span>
               </a>
               <img src={logoGold} alt="Servet İnşaat" className="w-[180px] md:w-[280px] h-auto" />
