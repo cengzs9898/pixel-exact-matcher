@@ -118,9 +118,9 @@ const Header = ({ activePage }: HeaderProps) => {
             opacity: menuVisible ? 1 : 0,
           }}
         >
-          {/* Left Panel - Menu (641x1223 on desktop) */}
+          {/* Left Panel - Menu */}
           <div
-            className="w-full md:w-[641px] md:h-[1223px] md:max-h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 min-h-screen md:min-h-0 flex-shrink-0"
+            className="w-full md:w-[641px] h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 flex-shrink-0 overflow-y-auto"
             style={{
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
