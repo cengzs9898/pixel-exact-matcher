@@ -120,8 +120,10 @@ const Header = ({ activePage }: HeaderProps) => {
         >
           {/* Left Panel - Menu */}
           <div
-            className="w-full md:w-[641px] h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 flex-shrink-0 overflow-y-auto"
+            className="bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 flex-shrink-0 overflow-y-auto w-full md:w-auto"
             style={{
+              width: typeof window !== "undefined" && window.innerWidth >= 768 ? "641px" : "100%",
+              height: "100vh",
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
             }}
