@@ -84,7 +84,7 @@ const Header = ({ activePage }: HeaderProps) => {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px] transition-transform duration-300 ease-out"
-      style={{ transform: headerVisible || menuOpen ? "translateY(0)" : "translateY(-100%)" }}
+      style={menuOpen ? undefined : { transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
     >
       <Link to="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
         <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
