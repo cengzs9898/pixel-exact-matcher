@@ -84,7 +84,7 @@ const Header = ({ activePage }: HeaderProps) => {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 bg-primary h-[60px] md:h-[146px] transition-transform duration-300 ease-out"
-      style={{ transform: headerVisible || menuOpen ? "translateY(0)" : "translateY(-100%)" }}
+      style={menuOpen ? undefined : { transform: headerVisible ? "translateY(0)" : "translateY(-100%)" }}
     >
       <Link to="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-10">
         <img src={logoGold} alt="Servet İnşaat" className="h-[40px] md:h-[117px] w-auto" />
@@ -118,9 +118,9 @@ const Header = ({ activePage }: HeaderProps) => {
             opacity: menuVisible ? 1 : 0,
           }}
         >
-          {/* Left Panel - Menu (641x1223 on desktop) */}
+          {/* Left Panel - Menu */}
           <div
-            className="w-full md:w-[641px] md:h-[1223px] md:max-h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 min-h-screen md:min-h-0 flex-shrink-0"
+            className="w-full md:w-[641px] h-screen bg-primary flex flex-col justify-between px-6 md:px-20 py-6 md:py-20 flex-shrink-0 overflow-y-auto"
             style={{
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -175,9 +175,9 @@ const Header = ({ activePage }: HeaderProps) => {
             </div>
           </div>
 
-          {/* Middle Panel - Projects 2x2 (631x1223 on desktop) */}
+          {/* Middle Panel - Projects 2x2 */}
           <div
-            className="hidden md:flex w-[631px] h-[1223px] max-h-screen bg-white relative items-center justify-center flex-shrink-0"
+            className="hidden md:flex w-[631px] h-screen bg-white relative items-center justify-center flex-shrink-0"
             style={{
               transform: menuVisible ? "translateX(0)" : "translateX(-100%)",
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
